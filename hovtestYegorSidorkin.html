@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Semantic-ui Pop-Up 2 or 3 hour Test Project</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://semantic-ui.com/dist/semantic.min.css" type="text/css" />
+    <style>
+    .content a {
+        margin: 5px;
+    }
+    .content a:nth-child(5n):after {
+        content:"\a";
+        white-space: pre;
+    }
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="http://semantic-ui.com/dist/semantic.min.js" type="text/javascript"></script>
+    <script>
+    $(function() {
+    
+        $( document ).tooltip();
+ 
+        $.each( $( ".specialurls" ), function( key, value ) {
+            var _this = $(this);
+            _this.attr('data-html', get_content(_this));
+            _this.popup({hoverable: true});
+        });
+        
+        
+        function get_content(_this) {
+            var usersrtring = _this.html();
+            var qstring     = usersrtring.replace(/ /g, "+");
+            var qstringwiki = usersrtring.replace(/ /g, "_"); 
+            var content     = '<div class="header">'+usersrtring+'</div>';
+            
+            content   += '<div class="content" style="text-align: center;">';
+            
+            amazonq = "http://www.amazon.com/s?url=search-alias%3Daps&field-keywords=" + qstring;
+            bingq = "http://www.bing.com/search?q=" + qstring;
+            dictionaryq = "http://dictionary.reference.com/browse/" + qstring;
+            doajq = "http://www.doaj.org/search?q=" + qstring;
+            ebscohostq = "http://www.google.com/search?q=" + qstring + "&as_sitesearch=ebscohost.com";
+            ericq = "http://www.eric.ed.gov/ERICWebPortal/search/simpleSearch.jsp?newSearch=true&eric_sortField=&searchtype=keyword&pageSize=10&ERICExtSearch_SearchValue_0=" + qstring + "&eric_displayStartCount=1&_pageLabel=ERICSearchResult&ERICExtSearch_SearchType_0=kw";
+            googlemainq = "http://www.google.com/search?num=50&hl=en&q=" + qstring;googleblogq = "http://www.google.com/search?&q=" + qstring + "&tbm=blg";googlediscussionsq = "http://www.google.com/search?num=50&hl=en&q=" + qstring + "&tbm=dsc";googleplacesq = "http://www.google.com/search?num=50&hl=en&q=" + qstring + "&tbm=plcs";
+            googleimagesq = "http://www.google.com/images?hl=en&q=" + qstring + "&tbm=isch";
+            googlescholarq = "http://scholar.google.com/scholar?q=" + qstring;
+            googlevideoq = "http://www.google.com/search?q=" + qstring + "&tbm=vid";
+            intuteq = "http://www.intute.ac.uk/cgi-bin/search.pl?term1=" + qstring;
+            archiveq = "http://www.archive.org/search.php?query=" + qstring;
+            iplq = "http://www.ipl.org/IPL/Finding?Key=" + qstring;
+            jstorq = "http://www.google.com/search?q=" + qstring + "&as_sitesearch=jstor.org";
+            locq = "http://www.loc.gov/fedsearch/metasearch/?cclquery=" + qstring;
+            museq = "http://www.google.com/search?q=" + qstring + "&&as_sitesearch=muse.jhu.edu";
+            oxfordjournalsq = "http://services.oxfordjournals.org/cgi/searchresults?fulltext=" + qstring + "&x=0&y=0";
+            pubmedq = "http://www.ncbi.nlm.nih.gov/pubmed?term=" + qstring + "[All%20Fields]&cmd=DetailsSearch"
+            sciencedirectq = "http://www.sciencedirect.com/science/quicksearch?query=" + qstring;
+            thesaurusq = "http://thesaurus.reference.com/browse/" + qstring;
+            wdlq = "http://www.wdl.org/en/search/gallery?ql=eng&s=" + qstring;
+            wikipediaq = "http://en.wikipedia.org/wiki/Special:Search/" + qstringwiki;
+            wolframalphaq = "http://www.wolframalpha.com/input/?i=" + qstring;
+            yahooq = "http://uk.search.yahoo.com/search?vc=&p=" + qstring;
+            youtubeq = "http://www.youtube.com/results?search_query=" + qstring;
+            
+            content   += '<a title="amazon" href="'+amazonq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.amazon.com/favicon.ico" alt="amazon"></a>';
+            content   += '<a title="bing" href="'+bingq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.bing.com/favicon.ico" alt="bing"></a>';
+            content   += '<a title="dictionary" href="'+dictionaryq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://dictionary.reference.com/favicon.ico" alt="dictionary"></a>';
+            content   += '<a title="doaj" href="'+doajq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.doaj.org/static/doaj/images/favicon.ico" alt="doaj"></a>';
+            content   += '<a title="ebscohost" href="'+ebscohostq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="ebscohost"></a>';
+            content   += '<a title="eric" href="'+ericq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.eric.ed.gov/favicon.ico" alt="eric"></a>';
+            content   += '<a title="googlemain" href="'+googlemainq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="googlemain"></a>';
+            content   += '<a title="googleimages" href="'+googleimagesq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="googleimages"></a>';
+            content   += '<a title="googlescholar" href="'+googlescholarq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://scholar.google.com/favicon.ico" alt="googlescholar"></a>';
+            content   += '<a title="googlevideo" href="'+googlevideoq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="googlevideo"></a>';
+            content   += '<a title="intute" href="'+intuteq+'" target="_blank"><img style="width: 16px; height: 16px;" src="https://www.jisc.ac.uk/sites/all/themes/jisc_clean/favicon.ico" alt="intute"></a>';
+            content   += '<a title="archive" href="'+archiveq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.archive.org/favicon.ico" alt="archive"></a>';
+            content   += '<a title="ipl" href="'+iplq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.ipl.org/favicon.ico" alt="ipl"></a>';
+            content   += '<a title="jstor" href="'+jstorq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="jstor"></a>';
+            content   += '<a title="loc" href="'+locq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.loc.gov/favicon.ico" alt="loc"></a>';
+            content   += '<a title="muse" href="'+museq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="muse"></a>';
+            content   += '<a title="oxfordjournals" href="'+oxfordjournalsq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.google.com/favicon.ico" alt="oxfordjournals"></a>';
+            content   += '<a title="pubmed" href="'+pubmedq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.ncbi.nlm.nih.gov/favicon.ico" alt="pubmed"></a>';
+            content   += '<a title="sciencedirect" href="'+sciencedirectq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://cdn.els-cdn.com/sd/favSD.ico" alt="sciencedirect"></a>';
+            content   += '<a title="thesaurus" href="'+thesaurusq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://static.sfdict.com/thescloud/favicon.ico" alt="thesaurus"></a>';
+            content   += '<a title="wdl" href="'+wdlq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.wdl.org/favicon.ico" alt="wdl"></a>';
+            content   += '<a title="wikipedia" href="'+wikipediaq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://en.wikipedia.org/favicon.ico" alt="wikipedia"></a>';
+            content   += '<a title="wolframalpha" href="'+wolframalphaq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.wolframalpha.com/favicon.ico" alt="wolframalpha"></a>';
+            content   += '<a title="yahoo" href="'+yahooq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://uk.search.yahoo.com/favicon.ico" alt="yahoo"></a>';
+            content   += '<a title="youtube" href="'+youtubeq+'" target="_blank"><img style="width: 16px; height: 16px;" src="http://www.youtube.com/favicon.ico" alt="youtube"></a>';
+            
+            content   += "</div>";
+            
+            return content;
+        }
+        
+    });
+    </script>
+</head>
+<body>
+
+TEST HTML
+
+The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to <a class=" specialurls">North America</a> by <a class=" specialurls">European colonists</a>. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.
+
+Apple trees are large if grown from seed, but small if grafted onto roots (rootstock). There are more than 7,500 known cultivars of apples, resulting in a range of desired characteristics. Different cultivars are bred for various tastes and uses, including <a class=" specialurls">cooking</a>, eating raw and cider production. Apples are generally propagated by grafting, although wild apples grow readily from seed. Trees and fruit are prone to a number of fungal, bacterial and pest problems, which can be controlled by a number of organic and non-organic means. In 2010, the <a class=" specialurls">fruit's genome</a> was decoded as part of research on disease control and selective breeding in <a class=" specialurls">apple production</a>. About <a class=" specialurls">80 million tons of apples</a> were grown worldwide in 2013, and China produced almost half of this total.[3] The United States is the second-leading producer, with more than 6% of world production. Turkey is third, followed by <a class=" specialurls">Italy, India and Poland</a>. Apples are often eaten raw, but can also be found in many prepared foods (especially desserts) and drinks. Many beneficial health effects are thought to result from eating apples; however, two types of allergies are attributed to various proteins found in the fruit.
+
+</body>
+</html>

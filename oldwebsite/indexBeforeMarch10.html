@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="author" content="Dan Weaver" />
+	<meta name="description" content="Dr. Dan Weaver" />
+	<meta name="keywords" content="Dan Weaver" />
+	<title>Dr. Dan Weaver</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<script type="text/javascript" src="js/textsizer.js"></script>
+	<script type="text/javascript" src="js/rel.js"></script>
+
+<!-- jQuery (required) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script>	    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+    <link href="css/forTExt.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.easing.1.2.js" type="text/javascript"></script>
+	<!-- Anything Slider -->
+	
+    <link href="css/anythingslider.css" rel="stylesheet" type="text/css" />
+	  
+    <script src="js/jquery.anythingslider.js" type="text/javascript"></script>
+
+	<!-- AnythingSlider optional extensions -->
+	<!-- <script src="js/jquery.anythingslider.fx.js"></script> -->
+	<!-- <script src="js/jquery.anythingslider.video.js"></script> -->
+    <script src="js/jquery.anythingslider.fx.min.js" type="text/javascript"></script>
+    
+
+	<!-- Define slider dimensions here -->
+	<style>
+	#slider3 { width: 680px; height: 317px; }
+	</style>
+
+	<!-- AnythingSlider initialization -->
+
+    	<script>
+    $(function(){
+ $('#slider3')
+  .anythingSlider()
+  .anythingSliderFx({
+   // '.selector' : [ 'caption', 'distance/size', 'time', 'easing' ]
+   // 'distance/size', 'time' and 'easing' are optional parameters
+   '.caption-top'    : [ 'caption-Top', '50px' ],
+   '.caption-right'  : [ 'caption-Right', '130px', '1000', 'easeOutBounce' ],
+   '.caption-bottom' : [ 'caption-Bottom', '50px' ],
+   '.caption-left'   : [ 'caption-Left', '130px', '1000', 'easeOutBounce' ]
+  })
+  /* add a close button (x) to the caption */
+  .find('div[class*=caption]')
+    .css({ position: 'absolute' })
+    .prepend('<span class="close">x</span>')
+    .find('.close').click(function(){
+      var cap = $(this).parent(),
+       ani = { bottom : -50 }; // bottom
+      if (cap.is('.caption-top')) { ani = { top: -50 }; }
+      if (cap.is('.caption-left')) { ani = { left: -150 }; }
+      if (cap.is('.caption-right')) { ani = { right: -150 }; }
+      cap.animate(ani, 400, function(){ cap.hide(); } );
+    });
+});
+</script>
+
+	<!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet -->
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="css/anythingslider-ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+
+    <link href="css/theme-metallic.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body><div style="position: absolute; top: 2px; left: 2px;  z-index: 99999;"><img src="img/DrDanAndPhoto5.png" /></div>
+
+<div id="top">
+
+<div id="menu">
+<!--<ul>
+<li><a href="http://www.DrDanWeaver.com/" class="current">home</a></li>
+ <li><a href="http://www.DrDanWeaver.com/contact.html">contact</a></li> 
+</ul>-->
+</div>
+</div>
+<div id="content">
+<div style="font-size: 1.5em; width: 640px; margin: 0 auto;">
+<center>
+<h2>Dan Weaver BSc. MRes. MSc. PhD.&nbsp;
+</h2>
+    <h2>Spatial & Big Data, Machine & Business Intelligence, Media & Training, R&amp;D
+
+    </h2>
+    <h2>Please...&nbsp;&nbsp;<a href="mailto:SayHello@DrDanWeaver.com?Subject=Hello%20Dr%20Dan">SayHello@DrDanWeaver.com</a></h2>
+<br />
+</center>
+</div>
+
+
+<div id="clear"></div>
+
+
+
+
+</div>
+
+
+<div >
+
+<!-- Simple AnythingSlider -->
+
+      
+	<ul id="slider3">
+    		
+            <li>
+        <!-- Note this caption is before the image, all others it is after -->
+   <div class="caption-right">
+    <h2>Teaching and Training</h2> IT Instructor @ Euro Training, London. Course Designer and Instructor @
+Alcatel & International House, Madrid. Instructor @ University of Nottingham.
+   </div> <img src="images/dan/teachingB.png" alt=""></li>
+
+		<li><img src="images/dan/SoftwareDevel1.jpg" alt=""><div class="caption-left">
+    <h2>Software and Solutions Development</h2> GIS, spatial intelligence, computer learning, environmental analysis, discovery, pattern recognition, neural networks, collaboration in virtual worlds.
+   </div></li>
+
+		<li><img src="images/dan/Service2.png" alt=""><div class="caption-right">
+<h2>Sales & Service</h2> Number 1 salesperson @ Serif Software. Troubleshooter – placating especially difficult customers @ Dixons/Curries Mastercare. Postmaster and switchboard @ HM Civil Service.
+   </div></li>
+
+		<li><img src="images/dan/develop1.jpg" alt=""> <div class="caption-left">
+    <h2>Community Development & Sustainable Construction</h2> One year in Honduras & Bangladesh including six months in isolated rural lowlands. Liaised with multiple government and non-governmental organisations. 
+   </div></li>
+
+   		<li><img src="images/dan/Analysis.jpg" alt=""> <div class="caption-right">
+    <h2>Spatial Analysis</h2> Expert in many forms of analysis including chloropleth, centroid, diffusion, regression, Gi(d), distance-velocity, spatial lag, autocorrelation, PCA, MDS, K-means, SOM.
+
+   </div></li>
+   
+
+	</ul>
+
+	<!-- END AnythingSlider -->
+    <!-- Add stylesheets here -->
+
+
+<!-- Older IE stylesheet, to reposition navigation arrows, added AFTER the theme stylesheet above -->
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://proloser.github.com/AnythingSlider/css/anythingslider-ie.css" type="text/css" media="screen" />
+<![endif]-->
+
+
+</div>
+
+<br /><br />
+
+<center> 
+<h2> 
+    <a href="DrDanWeaver.doc">Dr. Weaver's Curriculum Vitae / Résumé (MS Word)</a> or <a href="DrDanWeaver.pdf">
+        pdf</a> </h2>
+<!--
+<h2>Expertise</h2>PhD Spatio-Temporal Computation (Dec 2013, UniNotts, scholarship). MSc Geographical Information Science (UniNotts, EU scholarship). MRes Disaster Management (UniCoventry). BSc Information Systems and Management (2.1 UniLeeds).
+
+<h2>Experience</h2>15 years teaching and training 10 years Research and Development 10 years Software and Web engineering 8 years project and people management 5 years Sales and Technical Support.
+
+<h2>Personal</h2>Native English, fluent Spanish, yoga, cycling, camping, walking, windsurf and SCUBA (divemaster).
+
+<h2>Keywords</h2>ArcGIS, ESRI, MapWindow, Google Earth, Visual Basic, VB, VR, Dot Net, Vector/Raster Programming, Neural Network, Remote Sensing, GIS, IT, Hazards, Vulnerability, Development, Sustainability, Flood Mapping.
+-->
+</center>
+<br />
+<br />
+<br />
+<br />
+<!-- <div id="footer">
+<p>Copyright 2011 TimeSpaceVision.com</p>
+</div> -->
+
+
+</body>
+</html>

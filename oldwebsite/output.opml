@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<opml version="1.1">
+ <head>
+     <title>DanList</title>
+     <dateCreated>Fri, 21 Feb 2014 22:00:12 +0000</dateCreated>
+     <ownerName>Dan</ownerName>
+     <ownerEmail>dan</ownerEmail>
+     </head>
+ <body>
+    <outline text="dy/dan  " type="rss" xmlUrl="http://feeds.feedburner.com/dydan1"/>
+    <outline text="Hack Education" type="rss" xmlUrl="http://feeds.feedburner.com/hackeducation"/>
+    <outline text="Free Technology for Teachers" type="rss" xmlUrl="http://www.freetech4teachers.com/feeds/posts/default?alt=rss"/>
+    <outline text="The Principal of Change | Stories of learning and leading" type="rss" xmlUrl="http://georgecouros.ca/blog/feed"/>
+  </body>
+</opml><?xml version="1.0" encoding="ISO-8859-1"?>
+<opml version="1.1">
+ <head>
+     <title>DanList</title>
+     <dateCreated>Fri, 21 Feb 2014 22:07:15 +0000</dateCreated>
+     <ownerName>Dan</ownerName>
+     <ownerEmail>dan</ownerEmail>
+     </head>
+ <body>
+    <outline text="dy/dan  " type="rss" xmlUrl="http://feeds.feedburner.com/dydan1"/>
+    <outline text="Hack Education" type="rss" xmlUrl="http://feeds.feedburner.com/hackeducation"/>
+    <outline text="Free Technology for Teachers" type="rss" xmlUrl="http://www.freetech4teachers.com/feeds/posts/default?alt=rss"/>
+    <outline text="The Principal of Change | Stories of learning and leading" type="rss" xmlUrl="http://georgecouros.ca/blog/feed"/>
+    <outline text="
+
+Edudemic - Education Technology Tips For Students And Teachers
+" type="rss" xmlUrl="http://www.edudemic.com/feed/"/>
+    <outline text=" ~ Stephen's Web" type="rss" xmlUrl="http://www.downes.ca\/[*page_feed*]"/>
+    <outline text="Steve Hargadon" type="rss" xmlUrl="http://www.stevehargadon.com/feeds/posts/default?alt=rss"/>
+    <outline text="
+Educational Technology and Mobile Learning
+" type="rss" xmlUrl="http://www.educatorstechnology.com/feeds/posts/default?alt=rss"/>
+    <outline text="for the love of learning" type="rss" xmlUrl="http://www.joebower.org/feeds/posts/default?alt=rss"/>
+    <outline text="Practical Theory | A View From the Schoolhouse " type="rss" xmlUrl="http://practicaltheory.org/blog/feed/"/>
+    <outline text="Ideas and Thoughts | Learning stuff since 1964" type="rss" xmlUrl="http://ideasandthoughts.org/feed/"/>
+    <outline text="Angela Maiers Educational Services, Inc." type="rss" xmlUrl="http://www.angelamaiers.com/feed"/>
+    <outline text="Home - Doug Johnson&amp;#39;s Blue Skunk Blog" type="rss" xmlUrl="http://doug-johnson.squarespace.com/blue-skunk-blog/rss.xml"/>
+    <outline text="Shanker Blog" type="rss" xmlUrl="http://shankerblog.org/?feed=rss2"/>
+  </body>
+</opml>
