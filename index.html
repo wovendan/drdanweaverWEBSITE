@@ -158,6 +158,26 @@
     </section>
 
 
+    <section id="cost" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Cost per article</h2>
+                    <hr class="light">
+                    <p class="text-faded">Suno: a song costs 12 credits, and 50,000 credits cost $50 → $0.001/credit → <strong>$0.012</strong> per song.</p>
+                    <div class="form-inline" style="margin: 15px 0;">
+                        <div class="form-group" style="margin: 5px;">
+                            <label for="llmCostInput" class="text-faded" style="margin-right:8px;">LLM cost (USD):</label>
+                            <input id="llmCostInput" type="number" class="form-control" step="0.001" min="0" value="0.020">
+                        </div>
+                    </div>
+                    <p class="text-faded" style="margin:6px 0;">Suno cost per article: <strong id="sunoCostValue">$0.012</strong></p>
+                    <p class="text-faded" style="margin:6px 0; font-size:18px;">Total cost (LLM + Suno): <strong id="totalCostValue">$0.032</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter">
@@ -296,6 +316,27 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script>
+    (function(){
+        var SUNO_CREDITS_PER_SONG = 12;
+        var USD_PER_CREDIT = 50 / 50000; // $50 for 50,000 credits => $0.001 per credit
+        var sunoUSD = SUNO_CREDITS_PER_SONG * USD_PER_CREDIT; // 0.012
+        function formatUSD(n){ return '$' + n.toFixed(3).replace(/0+$/,'').replace(/\.$/,''); }
+        var sunoEl = document.getElementById('sunoCostValue');
+        var totalEl = document.getElementById('totalCostValue');
+        var llmInput = document.getElementById('llmCostInput');
+        if (sunoEl) sunoEl.textContent = formatUSD(sunoUSD);
+        function recalc(){
+            var llm = parseFloat(llmInput && llmInput.value) || 0;
+            var total = llm + sunoUSD;
+            if (totalEl) totalEl.textContent = formatUSD(total);
+        }
+        if (llmInput){
+            llmInput.addEventListener('input', recalc);
+            recalc();
+        }
+    })();
+    </script>
 
 </body>
 
